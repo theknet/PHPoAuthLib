@@ -161,6 +161,14 @@ class Google extends AbstractService
     /**
      * {@inheritdoc}
      */
+    public function getAuthorizationMethod()
+    {
+        return static::AUTHORIZATION_METHOD_HEADER_BEARER;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getAccessTokenEndpoint()
     {
         return new Uri('https://accounts.google.com/o/oauth2/token');
